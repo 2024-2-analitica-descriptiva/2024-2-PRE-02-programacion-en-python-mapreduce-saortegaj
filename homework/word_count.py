@@ -52,14 +52,14 @@ def line_preprocessing(sequence):
         for key, value in sequence
     ]
     
-    # sequence=[
-    #     (key, value.lower())
-    #     for key, value in sequence
-    # ]
-    # sequence=[
-    #     (key, value.strip())
-    #     for key, value in sequence
-    # ]
+    sequence=[
+        (key, value.lower())
+        for key, value in sequence
+    ]
+    sequence=[
+        (key, value.strip())
+        for key, value in sequence
+    ]
     
     return sequence
 
@@ -120,6 +120,7 @@ def create_ouptput_directory(output_directory):
         for file in glob.glob(f"{output_directory}/*"):
             os.remove(file)
         os.rmdir(output_directory)
+        
     os.makedirs(output_directory)
 
 #
